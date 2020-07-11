@@ -3882,3 +3882,9 @@ body.is-preload #header.alt .logo {
     max-width: 100%;
   }
 }
+
+.grantlify-icon {
+  width: 100%;
+  background: url(./images/grantlify.gif);
+  background-size: cover;
+}
