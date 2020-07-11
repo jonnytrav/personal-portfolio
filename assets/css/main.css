@@ -2577,13 +2577,6 @@ dl dt {
 dl dd {
   margin-left: 2em;
 }
-/* might delete later */
-.alt-container {
-  display: flex;
-  flex-flow: column nowrap;
-  /* align-items: center; */
-}
-/* might delete later */
 
 dl.alt dt {
   display: block;
@@ -3807,7 +3800,7 @@ body.is-preload #header.alt .logo {
 }
 
 #footer > * {
-  width: calc(50% - 2em);
+  /* width: calc(50% - 2em); */
   margin-left: 2em;
 }
 
@@ -3885,6 +3878,25 @@ body.is-preload #header.alt .logo {
 
 .grantlify-icon {
   width: 100%;
-  background: url(./images/grantlify.gif);
+  background: url("./images/grantlify.gif");
   background-size: cover;
+}
+
+/* might delete later */
+.alt-container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 49%;
+}
+/* might delete later */
+
+.thanks-container {
+  width: 49%;
+}
+
+.alt-thanks-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
