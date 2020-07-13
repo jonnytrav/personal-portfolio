@@ -3876,16 +3876,10 @@ body.is-preload #header.alt .logo {
   }
 }
 
-.grantlify-icon {
-  width: 100%;
-  background: url("./images/grantlify.gif");
-  background-size: cover;
-}
-
 /* might delete later */
 .alt-container {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   width: 49%;
 }
 /* might delete later */
@@ -3899,4 +3893,15 @@ body.is-preload #header.alt .logo {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+
+.gif-container {
+  /* box-sizing: border-box;
+  width: 32%; */
+}
+
+.grantlify-icon {
+  width: 100%;
+  background: url("./images/grantlify.gif");
+  background-size: cover;
 }
