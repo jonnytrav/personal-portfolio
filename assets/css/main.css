@@ -3895,13 +3895,15 @@ body.is-preload #header.alt .logo {
   justify-content: space-between;
 }
 
-.gif-container {
-  /* box-sizing: border-box;
-  width: 32%; */
-}
-
 .grantlify-icon {
   width: 100%;
   background: url("./images/grantlify.gif");
   background-size: cover;
+}
+
+.algorithm-icon {
+  width: 100%;
+  background: url("./images/official-algorithm.gif");
+  background-size: cover;
+  height: 100%;
 }
