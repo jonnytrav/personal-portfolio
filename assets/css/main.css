@@ -3907,3 +3907,9 @@ body.is-preload #header.alt .logo {
   background-size: cover;
   height: 100%;
 }
+
+.skills-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
