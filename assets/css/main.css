@@ -3913,3 +3913,8 @@ body.is-preload #header.alt .logo {
   flex-flow: row nowrap;
   justify-content: center;
 }
+
+.space-p {
+  margin-left: 2%;
+  margin-right: 2%;
+}
