@@ -2726,7 +2726,11 @@ ul.actions.fit.stacked {
 
 /* Icons */
 
+<<<<<<< HEAD
+/* ul.icons {
+=======
 ul.icons {
+>>>>>>> 2b97c9ef4a781efc0b4344c6cc844a80c0593aa3
   cursor: default;
   list-style: none;
   padding-left: 0;
@@ -2739,6 +2743,12 @@ ul.icons li {
 
 ul.icons li:last-child {
   padding-right: 0 !important;
+} */
+ul.icons {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
 }
 
 /* Section/Article */
@@ -3878,14 +3888,29 @@ body.is-preload #header.alt .logo {
 
 /* might delete later */
 .alt-container {
+<<<<<<< HEAD
+  width: 49%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+=======
   display: flex;
   flex-flow: column wrap;
   width: 49%;
+>>>>>>> 2b97c9ef4a781efc0b4344c6cc844a80c0593aa3
 }
 /* might delete later */
 
 .thanks-container {
   width: 49%;
+<<<<<<< HEAD
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+=======
+>>>>>>> 2b97c9ef4a781efc0b4344c6cc844a80c0593aa3
 }
 
 .alt-thanks-container {
@@ -3893,6 +3918,28 @@ body.is-preload #header.alt .logo {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+@media screen and (max-width: 736px) {
+  .alt-thanks-container {
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .thanks-container {
+    width: 70%;
+  }
+  .alt-container {
+    width: 70%;
+  }
+  .icons {
+    width: 90%;
+    padding-left: 0;
+    justify-content: space-between;
+  }
+  ul li {
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
 
 .grantlify-icon {
