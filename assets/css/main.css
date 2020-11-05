@@ -2542,11 +2542,6 @@ ol li {
 ul {
   list-style: disc;
   margin: 0 0 2em 0;
-  padding-left: 1em;
-}
-
-ul li {
-  padding-left: 0.5em;
 }
 
 ul.alt {
@@ -2727,6 +2722,7 @@ ul.actions.fit.stacked {
 /* Icons */
 
 ul.icons {
+  width: 65%;
   cursor: default;
   list-style: none;
   display: flex;
@@ -2919,8 +2915,8 @@ table.alt tbody tr td {
 
 .features li {
   width: calc(33.33333% - 2em);
-  margin-left: 2em;
-  margin-top: 3em;
+  /* margin-left: 2em;
+  margin-top: 3em; */
   padding: 0;
 }
 
@@ -3905,14 +3901,12 @@ body.is-preload #header.alt .logo {
   .alt-container {
     width: 70%;
   }
-  .icons {
-    width: 90%;
-    padding-left: 0;
-    justify-content: space-between;
+  .alt-container h2 {
+    margin-bottom: 11%;
   }
-  ul li {
-    padding-left: 0;
-    margin-left: 0;
+  ul.icons {
+    width: 80%;
+    justify-content: space-between;
   }
 }
 
