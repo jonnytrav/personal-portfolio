@@ -2726,25 +2726,8 @@ ul.actions.fit.stacked {
 
 /* Icons */
 
-<<<<<<< HEAD
-/* ul.icons {
-=======
 ul.icons {
->>>>>>> 2b97c9ef4a781efc0b4344c6cc844a80c0593aa3
   cursor: default;
-  list-style: none;
-  padding-left: 0;
-}
-
-ul.icons li {
-  display: inline-block;
-  padding: 0 0.65em 0 0;
-}
-
-ul.icons li:last-child {
-  padding-right: 0 !important;
-} */
-ul.icons {
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
@@ -3888,29 +3871,20 @@ body.is-preload #header.alt .logo {
 
 /* might delete later */
 .alt-container {
-<<<<<<< HEAD
   width: 49%;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-=======
-  display: flex;
-  flex-flow: column wrap;
-  width: 49%;
->>>>>>> 2b97c9ef4a781efc0b4344c6cc844a80c0593aa3
 }
 /* might delete later */
 
 .thanks-container {
   width: 49%;
-<<<<<<< HEAD
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-=======
->>>>>>> 2b97c9ef4a781efc0b4344c6cc844a80c0593aa3
 }
 
 .alt-thanks-container {
