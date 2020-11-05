@@ -1,96 +1,117 @@
-///
-/// Stellar by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
 
-/* Nav */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
 
-	#nav {
-		@include vendor('transition', (
-			'background-color #{_duration(transition)} ease',
-			'border-top-left-radius #{_duration(transition)} ease',
-			'border-top-right-radius #{_duration(transition)} ease',
-			'padding #{_duration(transition)} ease',
-		));
-		@include color-typography(invert);
-		position: absolute;
-		width: _size(inner);
-		max-width: calc(100% - #{_size(element-margin) * 2});
-		padding: 1em;
-		background-color: _palette(invert, bg-alt);
-		border-top-left-radius: _size(border-radius-main);
-		border-top-right-radius: _size(border-radius-main);
-		cursor: default;
-		text-align: center;
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
 
-		& + #main {
-			padding-top: 4.25em;
-		}
+  @include hover-focus {
+    text-decoration: none;
+  }
 
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
 
-			li {
-				@include vendor('transition', (
-					'margin #{_duration(transition)} ease'
-				));
-				display: inline-block;
-				margin: 0 0.35em;
-				padding: 0;
-				vertical-align: middle;
+//
+// Tabs
+//
 
-				a {
-					@include vendor('transition', (
-						'font-size #{_duration(transition)} ease'
-					));
-					display: inline-block;
-					height: 2.25em;
-					line-height: 2.25em;
-					padding: 0 1.25em;
-					border: 0;
-					border-radius: _size(border-radius);
-					box-shadow: inset 0 0 0 1px transparent;
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
-					&:hover {
-						background-color: _palette(invert, border-bg);
-					}
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
 
-					&.active {
-						background-color: _palette(invert, bg);
-						box-shadow: none;
-					}
-				}
-			}
-		}
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
 
-		&.alt {
-			position: fixed;
-			top: 0;
-			padding: 0.5em 1em;
-			background-color: transparentize(_palette(invert, bg-alt), 0.05);
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
-			z-index: _misc(z-index-base);
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color;
+    }
 
-			ul {
-				li {
-					margin: 0 0.175em;
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
 
-					a {
-						font-size: 0.9em;
-					}
-				}
-			}
-		}
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
 
-		@include breakpoint('<=small') {
-			display: none;
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+}
 
-			& + #main {
-				padding-top: 0;
-			}
-		}
-	}
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    @include border-radius($nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
+}
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}

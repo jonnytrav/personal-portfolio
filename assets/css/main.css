@@ -2542,11 +2542,6 @@ ol li {
 ul {
   list-style: disc;
   margin: 0 0 2em 0;
-  padding-left: 1em;
-}
-
-ul li {
-  padding-left: 0.5em;
 }
 
 ul.alt {
@@ -2727,18 +2722,12 @@ ul.actions.fit.stacked {
 /* Icons */
 
 ul.icons {
+  width: 65%;
   cursor: default;
   list-style: none;
-  padding-left: 0;
-}
-
-ul.icons li {
-  display: inline-block;
-  padding: 0 0.65em 0 0;
-}
-
-ul.icons li:last-child {
-  padding-right: 0 !important;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
 }
 
 /* Section/Article */
@@ -2926,8 +2915,8 @@ table.alt tbody tr td {
 
 .features li {
   width: calc(33.33333% - 2em);
-  margin-left: 2em;
-  margin-top: 3em;
+  /* margin-left: 2em;
+  margin-top: 3em; */
   padding: 0;
 }
 
@@ -3878,14 +3867,20 @@ body.is-preload #header.alt .logo {
 
 /* might delete later */
 .alt-container {
+  width: 49%;
   display: flex;
   flex-flow: column wrap;
-  width: 49%;
+  justify-content: center;
+  align-items: center;
 }
 /* might delete later */
 
 .thanks-container {
   width: 49%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .alt-thanks-container {
@@ -3893,6 +3888,26 @@ body.is-preload #header.alt .logo {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+@media screen and (max-width: 736px) {
+  .alt-thanks-container {
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .thanks-container {
+    width: 70%;
+  }
+  .alt-container {
+    width: 70%;
+  }
+  .alt-container h2 {
+    margin-bottom: 11%;
+  }
+  ul.icons {
+    width: 80%;
+    justify-content: space-between;
+  }
 }
 
 .grantlify-icon {
